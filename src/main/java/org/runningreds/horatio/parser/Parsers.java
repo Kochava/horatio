@@ -104,7 +104,7 @@ public class Parsers {
             // This ugliness brought to you by dependency on generated code that
             // Eclipse/Maven just can't cope with.
             BufferedInputStream bufferedIn = new BufferedInputStream(in);
-            Class<?> c = Class.forName("org.runningreds.tbgen.parser.idl.TBaseParser");
+            Class<?> c = Class.forName("org.runningreds.horatio.parser.idl.HoratioParser");
             Constructor<?> ctor = c.getConstructor(ModelSet.class, String.class, InputStream.class);
             Object parser = ctor.newInstance(modelSet, modelName, bufferedIn);
             Method m = c.getMethod("Model");
